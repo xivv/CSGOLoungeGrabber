@@ -9,3 +9,5 @@ How to use
 		for (Match match : pack.getMatchList()) {
 			System.out.println(match);
 		}
+		
+		pack.update();
