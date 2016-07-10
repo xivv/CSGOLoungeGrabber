@@ -26,7 +26,7 @@ public class Loader {
 
 		for (int i = 0; i < matches.length; i++) {
 			try {
-				
+
 				if (i != 0 && i != matches.length - 1) {
 
 					// Comment
@@ -35,7 +35,7 @@ public class Loader {
 
 					matcher.find();
 
-					String comment = matcher.group(1);
+					String comment = matcher.group(1).replaceAll("Â ", "");
 
 					// Timeleft
 					matcher = StringPattern.timePattern.matcher(matches[i]);
@@ -82,7 +82,7 @@ public class Loader {
 					matcher.find();
 
 					String team1Percent = matcher.group(1);
-
+					
 					// MATCH WON
 
 					matcher = StringPattern.teamWonPattern.matcher(matches[i].split("teamtext")[0]);
@@ -112,10 +112,8 @@ public class Loader {
 
 					String team2Name = matcher.group(1);
 
-					matchList.add(
-							new Match(team1Name, team2Name, status, format, event, time, comment, team1Percent + "%",
-									(String.valueOf(100 - Integer.parseInt(team1Percent)) + "%"), team1Won, team2Won));
-
+					matchList.add(new Match(team1Name, team2Name, status, format, event, time, comment, team1Percent,
+							String.valueOf(100 - Integer.parseInt(team1Percent.split("%")[0]) + "%"), team1Won, team2Won));
 				}
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
