@@ -44,6 +44,14 @@ public class Loader {
 
 					String time = matcher.group(1);
 
+					// MATCHURL
+
+					matcher = StringPattern.matchURLPattern.matcher(matches[i]);
+
+					matcher.find();
+
+					String matchURL = matcher.group(1);
+					
 					// Eventname
 					matcher = StringPattern.eventNamePattern.matcher(matches[i]);
 
@@ -82,7 +90,7 @@ public class Loader {
 					matcher.find();
 
 					String team1Percent = matcher.group(1);
-					
+
 					// MATCH WON
 
 					matcher = StringPattern.teamWonPattern.matcher(matches[i].split("teamtext")[0]);
@@ -112,8 +120,11 @@ public class Loader {
 
 					String team2Name = matcher.group(1);
 
+				
+
 					matchList.add(new Match(team1Name, team2Name, status, format, event, time, comment, team1Percent,
-							String.valueOf(100 - Integer.parseInt(team1Percent.split("%")[0]) + "%"), team1Won, team2Won));
+							String.valueOf(100 - Integer.parseInt(team1Percent.split("%")[0]) + "%"), team1Won,
+							team2Won, matchURL));
 				}
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
