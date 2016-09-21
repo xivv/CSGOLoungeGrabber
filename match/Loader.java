@@ -85,12 +85,6 @@ public class Loader {
 
 					String team1Name = matcher.group(1);
 
-					matcher = StringPattern.teamPercentPattern.matcher(matches[i]);
-
-					matcher.find();
-
-					String team1Percent = matcher.group(1);
-
 					// MATCH WON
 
 					matcher = StringPattern.teamWonPattern.matcher(matches[i].split("teamtext")[0]);
@@ -122,8 +116,7 @@ public class Loader {
 
 				
 
-					matchList.add(new Match(team1Name, team2Name, status, format, event, time, comment, team1Percent,
-							String.valueOf(100 - Integer.parseInt(team1Percent.split("%")[0]) + "%"), team1Won,
+					matchList.add(new Match(team1Name, team2Name, status, format, event, time, comment, team1Won,
 							team2Won, matchURL));
 				}
 			} catch (Exception e) {
