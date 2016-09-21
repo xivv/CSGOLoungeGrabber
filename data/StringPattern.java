@@ -8,7 +8,6 @@ public class StringPattern {
 	public static Pattern formatPattern = Pattern.compile("\"format\">(.*?)</span");
 	public static Pattern eventNamePattern = Pattern.compile("\"eventm\">(.*?)</div");
 	public static Pattern teamNamePattern = Pattern.compile("<b>(.*?)</b>");
-	public static Pattern teamPercentPattern = Pattern.compile("<i>(.*?)</i>");
 	public static Pattern teamWonPattern = Pattern.compile("csgolounge.com/img/won.png");
 	public static Pattern commentPattern = Pattern.compile("#D12121\">(.*?)</span>");
 	public static Pattern matchURLPattern = Pattern.compile("m=(.*?)\"");
