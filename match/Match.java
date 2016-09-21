@@ -24,10 +24,6 @@ public class Match {
 
 	private String comment;
 
-	private String team1Percent;
-
-	private String team2Percent;
-
 	private boolean team1Won;
 
 	private boolean team2Won;
@@ -37,17 +33,17 @@ public class Match {
 	public String toString() {
 
 		if (comment.equals(""))
-			return "[" + time + " " + status.toString() + " " + team1Percent + " " + team1Name + " vs " + team2Name
-					+ " " + team2Percent + " " + format.toString() + " " + event + " " + team1Won + " " + team2Won + " "
+			return "[" + time + " " + status.toString() +  " " + team1Name + " vs " + team2Name
+					+ " " + format.toString() + " " + event + " " + team1Won + " " + team2Won + " "
 					+ matchURL + "]";
 		else
-			return "[" + time + " " + status.toString() + " " + team1Percent + " " + team1Name + " vs " + team2Name
-					+ " " + team2Percent + " " + format.toString() + " " + event + " " + comment + " " + team1Won + " "
+			return "[" + time + " " + status.toString() +  " " + team1Name + " vs " + team2Name
+					+ " "  + format.toString() + " " + event + " " + comment + " " + team1Won + " "
 					+ team2Won + " " + matchURL + "]";
 	}
 
 	public Match(String team1Name, String team2Name, MatchStatus status, MatchFormat format, String event, String time,
-			String comment, String team1Percent, String team2Percent, boolean team1Won, boolean team2Won,
+			String comment, boolean team1Won, boolean team2Won,
 			String matchURL) {
 		super();
 		this.team1Name = team1Name;
@@ -57,8 +53,6 @@ public class Match {
 		this.event = event;
 		this.time = time;
 		this.comment = comment;
-		this.team1Percent = team1Percent;
-		this.team2Percent = team2Percent;
 		this.team1Won = team1Won;
 		this.team2Won = team2Won;
 		this.matchURL = "https://csgolounge.com/match?m=" + matchURL;
@@ -90,14 +84,6 @@ public class Match {
 
 	public String getComment() {
 		return comment;
-	}
-
-	public String getTeam1Percent() {
-		return team1Percent;
-	}
-
-	public String getTeam2Percent() {
-		return team2Percent;
 	}
 
 	public boolean isTeam1Won() {
