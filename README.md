@@ -2,7 +2,9 @@
 Java libary to retrieve matchinformation about listed matches on csgolounge
 
 Changelog:
+
       - 22.09.16 Updated for Gambling update
+
 
 >Information example with match.toString() :
 
@@ -14,6 +16,8 @@ Changelog:
 
 
 How to use 
+
+	Download and implement the jar in your build.
 
 
 	MatchPackage pack = new MatchPackage();
