@@ -30,21 +30,26 @@ public class Match {
 
 	private String matchURL;
 
+	private String team1LogoURL;
+
+	private String team2LogoURL;
+	
+
 	public String toString() {
 
 		if (comment.equals(""))
-			return "[" + time + " " + status.toString() +  " " + team1Name + " vs " + team2Name
-					+ " " + format.toString() + " " + event + " " + team1Won + " " + team2Won + " "
-					+ matchURL + "]";
+			return "[" + time + " " + status.toString() + " " + team1Name + " vs " + team2Name + " " + format.toString()
+					+ " " + event + " " + team1Won + " " + team2Won + " " + matchURL + " " + team1LogoURL + " "
+					+ team2LogoURL + "]";
 		else
-			return "[" + time + " " + status.toString() +  " " + team1Name + " vs " + team2Name
-					+ " "  + format.toString() + " " + event + " " + comment + " " + team1Won + " "
-					+ team2Won + " " + matchURL + "]";
+			return "[" + time + " " + status.toString() + " " + team1Name + " vs " + team2Name + " " + format.toString()
+					+ " " + event + " " + comment + " " + team1Won + " " + team2Won + " " + matchURL + " "
+					+ team1LogoURL + " " + team2LogoURL + "]";
 	}
 
 	public Match(String team1Name, String team2Name, MatchStatus status, MatchFormat format, String event, String time,
-			String comment, boolean team1Won, boolean team2Won,
-			String matchURL) {
+			String comment, boolean team1Won, boolean team2Won, String matchURL, String team1LogoURL,
+			String team2LogoURL) {
 		super();
 		this.team1Name = team1Name;
 		this.team2Name = team2Name;
@@ -56,6 +61,8 @@ public class Match {
 		this.team1Won = team1Won;
 		this.team2Won = team2Won;
 		this.matchURL = "https://csgolounge.com/match?m=" + matchURL;
+		this.team1LogoURL = team1LogoURL;
+		this.team2LogoURL = team2LogoURL;
 	}
 
 	public String getTeam1Name() {
@@ -100,6 +107,14 @@ public class Match {
 
 	public void setMatchURL(String matchURL) {
 		this.matchURL = matchURL;
+	}
+
+	public String getTeam1LogoURL() {
+		return team1LogoURL;
+	}
+
+	public String getTeam2LogoURL() {
+		return team2LogoURL;
 	}
 
 }
