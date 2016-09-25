@@ -4,13 +4,15 @@ Java libary to retrieve matchinformation about listed matches on csgolounge
 Changelog:
 
       - 22.09.16 Updated for Gambling update
+      - 25.09.16 Added TeamLogos
+      
 
 
 >Information example with match.toString() :
 
->[ TIME STATUS TEAM1 vs TEAM2 FORMAT EVENT COMMENT WIN1 WIN2 MATCHURL]
+>[ TIME STATUS TEAM1 vs TEAM2 FORMAT EVENT COMMENT WIN1 WIN2 MATCHURL TEAM1LOGO TEAM2LOGO]
 
->[2 days ago LIVE BD vs DNA BO3 GameShow Open Wrong information given about start time. false false https://csgolounge.com/match?m=10291]
+>[20 hours from now ONCOMING HR vs Na'Vi BO1 ESL false false https://csgolounge.com/match?m=11470 http://csgolounge.com/img/teams/HR.jpg?1465819889 http://csgolounge.com/img/teams/Na\]
 
 
 
