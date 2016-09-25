@@ -114,10 +114,21 @@ public class Loader {
 
 					String team2Name = matcher.group(1);
 
-				
+					// LOGOS
+					
+					matcher = StringPattern.logoURLPattern.matcher(matches[i]);
+					
+					matcher.find();
+
+					String team1LogoURL = "http://csgolounge.com/img/teams/" + matcher.group(1);
+					
+					matcher.find();
+
+					String team2LogoURL = "http://csgolounge.com/img/teams/" + matcher.group(1);
+					
 
 					matchList.add(new Match(team1Name, team2Name, status, format, event, time, comment, team1Won,
-							team2Won, matchURL));
+							team2Won, matchURL,team1LogoURL,team2LogoURL));
 				}
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
