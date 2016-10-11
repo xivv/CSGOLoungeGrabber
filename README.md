@@ -1,5 +1,5 @@
 # CSGOLoungeGrabber
-Java libary to retrieve matchinformation about listed matches on csgolounge
+Java libary to retrieve matchinformation about listed matches on https://csgolounge.com/
 
 Changelog:
 
