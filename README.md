@@ -5,14 +5,15 @@ Changelog:
 
       - 22.09.16 Updated for Gambling update
       - 25.09.16 Added TeamLogos
+      - 11.10.16 Reupdated new "Gambling" update
       
 
 
 >Information example with match.toString() :
 
->[ TIME STATUS TEAM1 vs TEAM2 FORMAT EVENT COMMENT WIN1 WIN2 MATCHURL TEAM1LOGO TEAM2LOGO]
+>[ TIME STATUS TEAM1 vs TEAM2 FORMAT EVENT COMMENT WIN1 WIN2 MATCHURL TEAM1LOGO TEAM2LOGO TEAM1PERCENT TEAM2PERCENT]
 
->[20 hours from now ONCOMING HR vs Na'Vi BO1 ESL false false https://csgolounge.com/match?m=11470 http://csgolounge.com/img/teams/HR.jpg?1465819889 http://csgolounge.com/img/teams/Na\]
+>[32 minutes from now ONCOMING ArchAngel vs temp.no BO3 iGame false false https://csgolounge.com/match?m=11735 http://csgolounge.com/img/teams/ArchAngel.jpg?1465819889 http://csgolounge.com/img/teams/temp.no.jpg?1465819889 78% 22%]
 
 
 
