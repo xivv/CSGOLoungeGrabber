@@ -51,7 +51,7 @@ public class Loader {
 					matcher.find();
 
 					String matchURL = matcher.group(1);
-					
+
 					// Eventname
 					matcher = StringPattern.eventNamePattern.matcher(matches[i]);
 
@@ -115,20 +115,28 @@ public class Loader {
 					String team2Name = matcher.group(1);
 
 					// LOGOS
-					
+
 					matcher = StringPattern.logoURLPattern.matcher(matches[i]);
-					
+
 					matcher.find();
 
 					String team1LogoURL = "http://csgolounge.com/img/teams/" + matcher.group(1);
-					
+
 					matcher.find();
 
 					String team2LogoURL = "http://csgolounge.com/img/teams/" + matcher.group(1);
-					
+
+					// percentages
+
+					matcher = StringPattern.teamPercentPattern.matcher(matches[i]);
+
+					matcher.find();
+
+					String team1Percent = matcher.group(1);
 
 					matchList.add(new Match(team1Name, team2Name, status, format, event, time, comment, team1Won,
-							team2Won, matchURL,team1LogoURL,team2LogoURL));
+							team2Won, matchURL, team1LogoURL, team2LogoURL, team1Percent,
+							String.valueOf(100 - Integer.parseInt(team1Percent.split("%")[0]) + "%")));
 				}
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
