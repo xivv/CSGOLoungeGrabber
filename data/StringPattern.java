@@ -12,4 +12,5 @@ public class StringPattern {
 	public static Pattern commentPattern = Pattern.compile("#D12121\">(.*?)</span>");
 	public static Pattern matchURLPattern = Pattern.compile("m=(.*?)\"");
 	public static Pattern logoURLPattern = Pattern.compile("img/teams/(.*?)'");
+	public static Pattern teamPercentPattern = Pattern.compile("<i>(.*?)</i>");
 }
