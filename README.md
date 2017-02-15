@@ -25,22 +25,6 @@ Java libary to retrieve matchinformation about listed matches on https://csgolou
 >[32 minutes from now ONCOMING ArchAngel vs temp.no BO3 iGame false false https://csgolounge.com/match?m=11735 http://csgolounge.com/img/teams/ArchAngel.jpg?1465819889 http://csgolounge.com/img/teams/temp.no.jpg?1465819889 78% 22%]
 
 
-
-
-## How to use 
-
-
-
-
-	MatchPackage pack = new MatchPackage();
-
-		for (Match match : pack.getMatchList()) {
-			System.out.println(match.getTeam1Name());
-		}
-		
-		pack.update();
-		
-
 		
 ## Example
 
