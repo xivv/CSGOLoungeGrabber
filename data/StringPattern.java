@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class StringPattern {
 
-	public static Pattern timePattern = Pattern.compile("<span class=\"match-time\">(.*?)</span>");
+	public static Pattern timePattern = Pattern.compile("<div class=\"col s4\">(.*?)</div>");
 	public static Pattern formatPattern = Pattern.compile("\"format\">(.*?)</span");
 	public static Pattern eventNamePattern = Pattern.compile("\"eventm\">(.*?)</div");
 	public static Pattern teamNamePattern = Pattern.compile("<b>(.*?)</b>");
