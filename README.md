@@ -6,6 +6,7 @@ Changelog:
       - 22.09.16 Updated for Gambling update
       - 25.09.16 Added TeamLogos
       - 11.10.16 Reupdated new "Gambling" update
+      - 15.02.17 Updated for infrastructure changes of the website
       
 
 
