@@ -24,7 +24,11 @@ public class Loader {
 		matches[0] = "";
 		matches[matches.length - 1] = "";
 
+		
 		for (int i = 0; i < matches.length; i++) {
+			
+			
+			
 			try {
 
 				if (i != 0 && i != matches.length - 1) {
@@ -35,7 +39,12 @@ public class Loader {
 
 					matcher.find();
 
-					String comment = matcher.group(1).replaceAll("Â ", "");
+					String comment = matcher.group(1);
+					
+					if (comment != "")
+						comment = comment.replaceAll("Â ", "");
+					
+				
 
 					// Timeleft
 					matcher = StringPattern.timePattern.matcher(matches[i]);
@@ -43,7 +52,7 @@ public class Loader {
 					matcher.find();
 
 					String time = matcher.group(1);
-
+					
 					// MATCHURL
 
 					matcher = StringPattern.matchURLPattern.matcher(matches[i]);
@@ -51,6 +60,8 @@ public class Loader {
 					matcher.find();
 
 					String matchURL = matcher.group(1);
+					
+				
 
 					// Eventname
 					matcher = StringPattern.eventNamePattern.matcher(matches[i]);
@@ -58,7 +69,7 @@ public class Loader {
 					matcher.find();
 
 					String event = matcher.group(1);
-
+				
 					// Eventformat
 
 					matcher = StringPattern.formatPattern.matcher(matches[i]);
@@ -78,6 +89,8 @@ public class Loader {
 					if (formatString.contains("5"))
 						format = MatchFormat.BO5;
 
+
+					
 					// TEAM1
 					matcher = StringPattern.teamNamePattern.matcher(matches[i]);
 
@@ -85,6 +98,8 @@ public class Loader {
 
 					String team1Name = matcher.group(1);
 
+	
+					
 					// MATCH WON
 
 					matcher = StringPattern.teamWonPattern.matcher(matches[i].split("teamtext")[0]);
@@ -94,7 +109,7 @@ public class Loader {
 					matcher = StringPattern.teamWonPattern.matcher(matches[i].split("teamtext")[1]);
 
 					boolean team2Won = matcher.find();
-
+					
 					MatchStatus status = null;
 
 					if (team1Won || team2Won && time.contains("ago"))
@@ -114,17 +129,18 @@ public class Loader {
 
 					String team2Name = matcher.group(1);
 
+
 					// LOGOS
 
 					matcher = StringPattern.logoURLPattern.matcher(matches[i]);
 
 					matcher.find();
 
-					String team1LogoURL = "http://csgolounge.com/img/teams/" + matcher.group(1);
+					String team1LogoURL = matcher.group(1);
 
 					matcher.find();
 
-					String team2LogoURL = "http://csgolounge.com/img/teams/" + matcher.group(1);
+					String team2LogoURL = matcher.group(1);
 
 					// percentages
 
