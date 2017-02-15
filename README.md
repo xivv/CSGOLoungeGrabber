@@ -1,6 +1,8 @@
 # CSGOLoungeGrabber
 Java libary to retrieve matchinformation about listed matches on https://csgolounge.com/
 
+Code Coverage: 75%
+
 Changelog:
 
       - 22.09.16 Updated for Gambling update
