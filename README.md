@@ -23,6 +23,20 @@ Changelog:
 
 How to use 
 
+Use getters to get raw information.
+
+
+
+	MatchPackage pack = new MatchPackage();
+
+		for (Match match : pack.getMatchList()) {
+			System.out.println(match.getTeam1Name());
+		}
+		
+		pack.update();
+		
+
+
 	Download and implement the jar in your build.
 
 
