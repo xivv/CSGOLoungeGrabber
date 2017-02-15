@@ -46,13 +46,6 @@ public class Loader {
 					
 				
 
-					// Timeleft
-					matcher = StringPattern.timePattern.matcher(matches[i]);
-
-					matcher.find();
-
-					String time = matcher.group(1);
-					
 					// MATCHURL
 
 					matcher = StringPattern.matchURLPattern.matcher(matches[i]);
@@ -60,6 +53,18 @@ public class Loader {
 					matcher.find();
 
 					String matchURL = matcher.group(1);
+					
+					// Timeleft
+					
+					String timetext = getStrFromUrl(("https://csgolounge.com/match?m=" + matchURL));
+					
+					matcher = StringPattern.timePattern.matcher(timetext);
+
+					matcher.find();
+
+					String time = matcher.group(1);
+					
+			
 					
 				
 
